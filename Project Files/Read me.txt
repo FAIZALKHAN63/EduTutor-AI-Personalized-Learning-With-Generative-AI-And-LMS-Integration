@@ -1,0 +1,141 @@
+🎓 EduTutor AI
+EduTutor AI is an intelligent, interactive web-based learning assistant that enables students to:
+
+Take quizzes in topics like Artificial Intelligence, Machine Learning, Generative AI, and Mathematics
+
+Ask any question and receive detailed answers using powerful language models
+
+View question-answer history for better learning
+
+Enable educators to view a simple performance dashboard
+
+🚀 Features
+Student Panel:
+
+📚 Take subject-based multiple-choice quizzes
+
+❓ Ask open-ended questions to an AI model (powered by Hugging Face Transformers)
+
+🧾 View your recent questions and answers
+
+Educator Panel:
+
+📊 Monitor quiz performance (basic dashboard; extensible for future analytics)
+
+Model Integration:
+
+🔗 Integrated with Hugging Face’s google/flan-t5-xl or custom fallback models
+
+🤖 Supports GPU acceleration (if available)
+
+📡 Uses Hugging Face's hosted inference API or loads model locally (if configured)
+
+📦 Requirements
+Make sure the following are installed:
+
+bash
+Copy
+Edit
+Python 3.8+
+CUDA-compatible GPU (optional for acceleration)
+🔧 Installation Steps (Windows / Local Machine)
+Clone this repo or download the files
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/edututor-ai.git
+cd edututor-ai
+Install dependencies
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+If you see torch==2.1.0 issues, try updating it:
+
+bash
+Copy
+Edit
+pip install torch==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
+Set your Hugging Face token
+
+Sign up at Hugging Face and get your access token.
+You can set it as an environment variable:
+
+bash
+Copy
+Edit
+set HF_TOKEN=your_token_here   # for Windows
+export HF_TOKEN=your_token_here  # for Linux/macOS
+Run the App
+
+bash
+Copy
+Edit
+streamlit run app.py
+Open in browser
+
+Streamlit will show a local URL like:
+http://localhost:8501
+Click or open in your browser to start using the app!
+
+🧠 AI Models and Technology
+Primary Model: google/flan-t5-xl
+
+Fallback/Alternate: gpt2, granite-3b-instruct (IBM) [optional, based on your API access]
+
+Frameworks:
+
+Streamlit (Frontend)
+
+Transformers (for NLP)
+
+PyTorch backend
+
+Hugging Face API
+
+📁 File Structure
+bash
+Copy
+Edit
+EduTutor-AI/
+│
+├── app.py                      # Main Streamlit application
+├── questions.py                # Manual question sets for quiz (AI, ML, etc.)
+├── load_flan_model.py          # Optional script for loading models locally
+├── requirements.txt            # All dependencies
+└── README.md                   # You’re reading it!
+📝 Usage Notes
+For local model usage, ensure transformers, torch, and accelerate are installed properly.
+
+If using Hugging Face API, monitor usage as free-tier has rate limits.
+
+The app does not store quiz or question-answer history in a database yet—this can be extended using SQLite, Firebase, or Supabase.
+
+📚 Subjects Covered
+Artificial Intelligence (AI)
+
+Machine Learning (ML)
+
+Generative AI (GenAI)
+
+Mathematics (algebra, logic, etc.)
+
+🧑‍🏫 Future Improvements
+User authentication & login system
+
+Admin panel to manage quiz content
+
+Performance visualization
+
+Language translation support
+
+Voice input and response (via Gradio)
+
+🙏 Credits
+Hugging Face 🤗 for the models and API
+
+Streamlit for the UI framework
+
+IBM for inspiration from Granite models
