@@ -50,7 +50,7 @@ Internet connection (for API access and model downloads)
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/edututor-ai.git
+git clone https://github.com/FAIZALKHAN63
 cd edututor-ai
 2️⃣ Install Dependencies
 bash
